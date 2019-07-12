@@ -8,7 +8,7 @@ Author: [Orestis Kaplanis](https://github.com/userman95)
 node -v >= v8.16.0
 
 npm -v >=  6.4.1
- 
+
 webpack -v >= 3.5.6
 
 ```
@@ -18,12 +18,16 @@ webpack -v >= 3.5.6
 git clone git@github.com:userman95/Restaurant-Page.git
 cd ./Restaurant-Page
 ```
-#### Install npm 
+#### Install npm
 ```
 npm install
+```
+#### Install url-loader and it's dependencies
+```
+npm install url-loader --save-dev
 ```
 #### Build project
 ```
 webpack
 ```
-Open up the `index.html` and you are ready to go 
+Open up the `index.html` and you are ready to go
