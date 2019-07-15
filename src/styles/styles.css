@@ -1,0 +1,58 @@
+html,body{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+.content{
+  background-image: url('../assets/img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+#content{
+  margin-top: 46px;
+}
+.container{
+  background-color: #282525;
+  height: 100%;
+}
+/* title style */
+.titles{
+  color: white;
+  font-size: 48px;
+  font-style: italic;
+}
+.tasty-title{
+  border: 3px red;
+  border-style: inset;
+  display: inline-block;
+  font-weight: bold;
+}
+.restaurant-title{
+  display: inline-block;
+}
+/* tab list styles */
+.tab-list{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.listItem{
+}
+.anchor-items{
+  color: white;
+  display: block;
+  font-size: 22px;
+  padding: 3px 7px;
+}
+.anchor-items:hover{
+  background-color: #c0c0c0;
+  color: #353232;
+  cursor: default;
+  text-decoration: none;
+}
+.content-tabs{
+  padding: 0;
+}
