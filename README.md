@@ -9,7 +9,7 @@ node -v >= v8.16.0
 
 npm -v >=  6.4.1
 
-webpack -v >= 3.5.6   (See install instructions for [webpack](https://webpack.js.org/guides/installation/) )
+webpack -v >= 3.5.6
 
 ```
 ## Setup
@@ -22,6 +22,9 @@ cd ./Restaurant-Page
 ```
 npm install
 ```
+#### Install webpack
+  See install instructions for [webpack](https://webpack.js.org/guides/installation/)
+
 #### Install url-loader and it's dependencies
 ```
 npm install url-loader --save-dev
