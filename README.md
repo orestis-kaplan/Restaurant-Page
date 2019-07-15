@@ -9,7 +9,7 @@ node -v >= v8.16.0
 
 npm -v >=  6.4.1
 
-webpack -v >= 3.5.6
+webpack -v >= 3.5.6   (See install instructions for [webpack](https://webpack.js.org/guides/installation/) )
 
 ```
 ## Setup
