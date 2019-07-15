@@ -97,16 +97,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // Page load function for display of tabs and their contents
-let tabsNames = ['Home','About','Contact','Menu']; // if you change values from
+const tabsNames = ['Home','About','Contact','Menu']; // if you change values from
                                       // here change from switch at tabs.js also
 function pageOnLoad(){
   Object(_tabs__WEBPACK_IMPORTED_MODULE_0__["buildTabs"])([Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["home"])(),Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["about"])(),Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["contact"])()],tabsNames);
   Object(_tabs__WEBPACK_IMPORTED_MODULE_0__["buildTabsContent"])([Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["home"])(),Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["about"])(),Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["contact"])(),Object(_tab_content__WEBPACK_IMPORTED_MODULE_1__["menu"])()]);
 }
 
-window.onload = function(){
   pageOnLoad();
-};
 
 
 /***/ }),
@@ -124,12 +122,12 @@ function buildTabs(tabs,tabsNames){
   let tabsList = document.createElement('ul');
   tabsList.setAttribute('class','tab-list');
 
-  for(let i = 0; i < tabsNames.length; i++){
+  for(let i of tabsNames){
     let tabsListElement = document.createElement('li');
-    tabsListElement.setAttribute('id','listItem-'+i);
+    tabsListElement.setAttribute('id','listItem-'+tabsNames.indexOf(i));
     let tabsNameAnchor = document.createElement('a');
     tabsNameAnchor.setAttribute('class','anchor-items');
-    tabsNameAnchor.insertAdjacentHTML("beforeend", tabsNames[i]);
+    tabsNameAnchor.insertAdjacentHTML("beforeend", i);
     tabsNameAnchor.addEventListener('click',checkTab);
     tabsListElement.appendChild(tabsNameAnchor);
     tabsList.appendChild(tabsListElement);
@@ -176,14 +174,14 @@ function toggleTab(tabname){
   });
 }
 
-// Create the contents for the available tabs 
+// Create the contents for the available tabs
 function buildTabsContent(tabs){
   let tabsContentList = document.createElement('ul');
   tabsContentList.setAttribute('class','content-tabs');
-    for(let i = 0; i< tabs.length;i++){
+    for(let i of tabs){
       let tabsArea = document.createElement('li');
-      tabsArea.setAttribute('id','element-'+i);
-      tabsArea.insertAdjacentHTML("beforeend",tabs[i]);
+      tabsArea.setAttribute('id','element-'+tabs.indexOf(i));
+      tabsArea.insertAdjacentHTML("beforeend",i);
       tabsArea.style.display = 'none';
       tabsContentList.appendChild(tabsArea);
       document.getElementById('content').appendChild(tabsContentList);

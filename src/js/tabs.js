@@ -5,12 +5,12 @@ function buildTabs(tabs,tabsNames){
   let tabsList = document.createElement('ul');
   tabsList.setAttribute('class','tab-list');
 
-  for(let i = 0; i < tabsNames.length; i++){
+  for(let i of tabsNames){
     let tabsListElement = document.createElement('li');
-    tabsListElement.setAttribute('id','listItem-'+i);
+    tabsListElement.setAttribute('id','listItem-'+tabsNames.indexOf(i));
     let tabsNameAnchor = document.createElement('a');
     tabsNameAnchor.setAttribute('class','anchor-items');
-    tabsNameAnchor.insertAdjacentHTML("beforeend", tabsNames[i]);
+    tabsNameAnchor.insertAdjacentHTML("beforeend", i);
     tabsNameAnchor.addEventListener('click',checkTab);
     tabsListElement.appendChild(tabsNameAnchor);
     tabsList.appendChild(tabsListElement);
@@ -57,14 +57,14 @@ function toggleTab(tabname){
   });
 }
 
-// Create the contents for the available tabs 
+// Create the contents for the available tabs
 function buildTabsContent(tabs){
   let tabsContentList = document.createElement('ul');
   tabsContentList.setAttribute('class','content-tabs');
-    for(let i = 0; i< tabs.length;i++){
+    for(let i of tabs){
       let tabsArea = document.createElement('li');
-      tabsArea.setAttribute('id','element-'+i);
-      tabsArea.insertAdjacentHTML("beforeend",tabs[i]);
+      tabsArea.setAttribute('id','element-'+tabs.indexOf(i));
+      tabsArea.insertAdjacentHTML("beforeend",i);
       tabsArea.style.display = 'none';
       tabsContentList.appendChild(tabsArea);
       document.getElementById('content').appendChild(tabsContentList);
